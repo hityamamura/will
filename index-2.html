@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>総合型選抜専門道場 Will ｜ NO WILL, NO GROWTH.</title>
+<meta name="description" content="総合型選抜専門道場 Will。教科は教えません。学校をフル活用し、自分の言葉で語れる人を育てる3年間。オンラインで全国どこからでも。無料の教育講演会＆説明会を開催中。">
+<meta property="og:title" content="総合型選抜専門道場 Will ｜ NO WILL, NO GROWTH.">
+<meta property="og:description" content="大学入学は、ゴールではなくスタート。自分の言葉で語れる人を育てる3年間。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="logo.png">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy-900:#0E2143;
+  --navy-800:#14294F;
+  --navy:#1B3A6B;
+  --navy-400:#3C5E92;
+  --gold:#B08D57;
+  --gold-light:#C9AB78;
+  --flame:#D6262F;
+  --cream:#FAF7F1;
+  --cream-2:#F2EDE3;
+  --ink:#22272E;
+  --ink-soft:#4A5361;
+  --line:#DCD3C4;
+  --max:1120px;
+}
+*{box-sizing:border-box;}
+html{color-scheme:light; scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif;
+  font-size:16px;
+  line-height:1.9;
+  -webkit-font-smoothing:antialiased;
+  text-size-adjust:100%;
+  overflow-x:hidden;
+}
+img{max-width:100%; display:block;}
+a{color:inherit;}
+.wrap{max-width:var(--max); margin:0 auto; padding:0 16px;}
+.mincho{font-family:"Noto Serif JP",serif;}
+
+/* ---------- header ---------- */
+header{
+  position:sticky; top:0; z-index:50;
+  background:rgba(14,33,67,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.hdr{display:flex; align-items:center; gap:12px; height:60px;}
+.hdr-logo{width:36px; height:36px; object-fit:contain; flex:none;}
+.hdr-name{font-family:"Noto Serif JP",serif; color:#fff; font-size:1.2rem; letter-spacing:.08em; line-height:1;}
+.hdr-sub{color:rgba(255,255,255,.62); font-size:.62rem; letter-spacing:.24em; margin-top:4px;}
+nav{margin-left:auto; display:none; gap:22px; font-size:.82rem;}
+nav a{color:rgba(255,255,255,.82); text-decoration:none;}
+nav a:hover{color:#fff;}
+.hdr-cta{
+  margin-left:auto; flex:none;
+  background:var(--gold); color:#fff; text-decoration:none;
+  font-size:.78rem; font-weight:700; letter-spacing:.04em;
+  padding:9px 14px; border-radius:3px; white-space:nowrap;
+}
+@media(min-width:900px){ nav{display:flex;} .hdr-cta{margin-left:22px;} }
+
+/* ---------- hero ---------- */
+.hero{position:relative; background:var(--navy-900); overflow:hidden;}
+.hero-img{
+  position:absolute; inset:0; width:100%; height:100%;
+  object-fit:cover; object-position:52% 42%; opacity:.5;
+}
+.hero::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(14,33,67,.86) 0%, rgba(14,33,67,.55) 40%, rgba(14,33,67,.92) 100%);
+}
+.hero-in{position:relative; z-index:2; padding:56px 0 64px; text-align:center;}
+.hero-logo{width:110px; margin:0 auto 18px;}
+.hero-kicker{color:rgba(255,255,255,.72); font-size:.74rem; letter-spacing:.42em; margin-bottom:6px;}
+.hero-name{
+  font-family:"Noto Serif JP",serif; color:#fff;
+  font-size:clamp(3rem,13vw,4.6rem); line-height:1; letter-spacing:.04em; margin:0;
+}
+.hero-slogan{
+  color:#fff; font-size:clamp(.82rem,3.3vw,1.02rem); font-weight:700;
+  letter-spacing:.14em; margin-top:14px;
+}
+.hero-slogan span{display:block; font-weight:400; font-size:.8em; letter-spacing:.06em; color:rgba(255,255,255,.78); margin-top:4px;}
+.hero-rule{width:52px; height:1px; background:var(--gold-light); margin:26px auto;}
+.hero-h1{
+  font-family:"Noto Serif JP",serif; color:#fff; font-weight:500;
+  font-size:clamp(1.6rem,6.6vw,2.7rem); line-height:1.55; letter-spacing:.03em; margin:0;
+}
+.hero-note{
+  margin-top:26px; color:rgba(255,255,255,.88); font-size:.88rem;
+  border:1px solid rgba(255,255,255,.26); border-radius:4px;
+  padding:14px 16px; max-width:560px; margin-left:auto; margin-right:auto;
+}
+.hero-note b{color:#fff;}
+.hero-note small{display:block; color:rgba(255,255,255,.62); font-size:.76rem; margin-top:4px;}
+
+.btn{
+  display:inline-block; text-decoration:none; font-weight:700;
+  padding:16px 30px; border-radius:4px; letter-spacing:.04em; font-size:.95rem;
+}
+.btn-gold{background:var(--gold); color:#fff; box-shadow:0 6px 18px rgba(0,0,0,.18);}
+.btn-gold:hover{background:#9c7b49;}
+.btn-line{background:#06C755; color:#fff;}
+.btn-line:hover{background:#05a948;}
+.hero-btn{margin-top:26px;}
+.hero-btn small{display:block; font-weight:400; font-size:.72rem; opacity:.85; margin-top:2px;}
+
+/* ---------- section basics ---------- */
+section{padding:64px 0;}
+.sec-label{
+  color:var(--gold); font-size:.68rem; letter-spacing:.34em;
+  text-align:center; margin-bottom:10px;
+}
+.sec-title{
+  font-family:"Noto Serif JP",serif; font-weight:600;
+  font-size:clamp(1.35rem,5.4vw,2rem); line-height:1.5; letter-spacing:.03em;
+  text-align:center; margin:0 0 12px; color:var(--navy-900);
+}
+.sec-lead{text-align:center; color:var(--ink-soft); font-size:.94rem; max-width:680px; margin:0 auto 36px;}
+.alt{background:var(--cream-2);}
+.navy-sec{background:var(--navy-900); color:#fff;}
+.navy-sec .sec-title{color:#fff;}
+.navy-sec .sec-lead{color:rgba(255,255,255,.76);}
+.navy-sec .sec-label{color:var(--gold-light);}
+
+/* ---------- 入試が変わりました ---------- */
+.notice{
+  background:#fff; border-left:4px solid var(--navy);
+  padding:22px 20px; border-radius:3px; box-shadow:0 2px 12px rgba(20,41,79,.06);
+  max-width:760px; margin:0 auto 32px;
+}
+.notice p{margin:0; font-size:.95rem;}
+.notice .em{font-weight:700; color:var(--navy-900); font-size:1.06rem;}
+.notice .em mark{background:linear-gradient(transparent 62%, #F3DDB4 62%); color:var(--flame); padding:0 2px;}
+.notice small{color:var(--ink-soft); font-size:.8rem;}
+
+.q3{display:grid; gap:12px; max-width:760px; margin:0 auto 30px;}
+@media(min-width:760px){ .q3{grid-template-columns:repeat(3,1fr);} }
+.q3 div{
+  background:var(--navy-900); color:#fff; border-radius:3px;
+  padding:20px 14px; text-align:center;
+  font-family:"Noto Serif JP",serif; font-size:1.02rem; line-height:1.7; letter-spacing:.02em;
+}
+.body-copy{max-width:760px; margin:0 auto; font-size:.95rem;}
+.body-copy p{margin:0 0 1.1em;}
+.body-copy .strong{font-weight:700; color:var(--navy-900);}
+.mori{
+  font-family:"Noto Serif JP",serif; color:var(--gold);
+  font-size:clamp(1.05rem,4vw,1.3rem); line-height:1.7; margin-top:30px; text-align:center;
+}
+.mori small{display:block; color:var(--ink-soft); font-size:.76rem; font-family:"Noto Sans JP",sans-serif; margin-top:6px;}
+
+/* ---------- 引用ブロック ---------- */
+.pull{
+  background:#fff; border:1px solid var(--line); border-top:3px solid var(--navy);
+  border-radius:3px; padding:26px 20px; text-align:center; max-width:760px; margin:0 auto;
+}
+.navy-sec .pull{background:rgba(255,255,255,.07); border-color:rgba(255,255,255,.2); border-top-color:var(--gold);}
+.pull p{margin:0; font-family:"Noto Serif JP",serif; font-size:clamp(1.05rem,4.2vw,1.35rem); line-height:1.75; color:var(--navy-900);}
+.navy-sec .pull p{color:#fff;}
+.pull small{display:block; margin-top:10px; font-family:"Noto Sans JP",sans-serif; font-size:.85rem; color:var(--ink-soft);}
+.navy-sec .pull small{color:rgba(255,255,255,.72);}
+
+/* ---------- 二本の柱 ---------- */
+.pillars{display:grid; gap:16px; max-width:860px; margin:0 auto;}
+@media(min-width:760px){ .pillars{grid-template-columns:1fr 1fr;} }
+.pillar{background:#fff; border:1px solid var(--line); border-radius:3px; padding:28px 22px; text-align:center;}
+.pillar .no{color:var(--gold); font-size:.68rem; letter-spacing:.3em;}
+.pillar h3{font-family:"Noto Serif JP",serif; font-size:1.3rem; margin:8px 0 14px; color:var(--navy-900); letter-spacing:.06em;}
+.pillar p{margin:0; font-size:.9rem; color:var(--ink-soft); text-align:left;}
+
+/* ---------- 起こること ---------- */
+.happens{display:grid; gap:1px; background:var(--line); border:1px solid var(--line); max-width:860px; margin:0 auto; border-radius:3px; overflow:hidden;}
+@media(min-width:700px){ .happens{grid-template-columns:1fr 1fr;} }
+.happens > div{background:#fff; padding:24px 20px;}
+.happens .n{font-family:"Noto Serif JP",serif; color:var(--gold); font-size:1.5rem; line-height:1;}
+.happens h4{margin:6px 0 6px; font-size:1.02rem; color:var(--navy-900);}
+.happens p{margin:0; font-size:.86rem; color:var(--ink-soft);}
+
+/* ---------- 3人 ---------- */
+.people{display:grid; gap:26px; max-width:960px; margin:0 auto;}
+@media(min-width:760px){ .people{grid-template-columns:repeat(3,1fr); gap:20px;} }
+.person{text-align:center; display:flex; flex-direction:column;}
+.person .eye{margin-top:auto;}
+.person img{width:160px; height:160px; border-radius:50%; object-fit:cover; margin:0 auto 16px; border:3px solid #fff; box-shadow:0 4px 16px rgba(20,41,79,.14);}
+.person .role{display:inline-block; background:var(--navy-900); color:#fff; font-size:.7rem; letter-spacing:.14em; padding:4px 12px; border-radius:2px; white-space:nowrap;}
+.person h3{font-family:"Noto Serif JP",serif; font-size:1.3rem; margin:12px 0 4px; color:var(--navy-900); letter-spacing:.06em;}
+.person .career{font-size:.82rem; color:var(--ink-soft); margin:0 0 14px; line-height:1.8;}
+.person .eye{
+  background:#fff; border:1px solid var(--line); border-left:3px solid var(--gold);
+  padding:12px 14px; font-size:.86rem; color:var(--navy-900); text-align:left; border-radius:2px;
+}
+.people-note{text-align:center; margin-top:28px; font-size:.92rem; color:var(--ink-soft);}
+.people-note b{color:var(--navy-900);}
+
+/* ---------- 3つの理由 ---------- */
+.reasons{max-width:820px; margin:0 auto; display:grid; gap:16px;}
+.reason{background:#fff; border:1px solid var(--line); border-radius:3px; padding:24px 20px;}
+.reason .tag{display:inline-block; background:var(--cream-2); color:var(--navy); font-size:.7rem; letter-spacing:.12em; padding:3px 10px; border-radius:2px;}
+.reason h3{font-family:"Noto Serif JP",serif; font-size:1.1rem; margin:10px 0 10px; color:var(--navy-900); line-height:1.6;}
+.reason p{margin:0 0 .8em; font-size:.9rem; color:var(--ink-soft);}
+.reason p:last-child{margin-bottom:0;}
+.reason .by{font-size:.78rem; color:var(--gold); font-weight:500;}
+.reason .quote{color:var(--navy-900); font-weight:700;}
+
+/* ---------- 料金テーブル ---------- */
+.table-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch; max-width:900px; margin:0 auto;}
+table{border-collapse:collapse; width:100%; min-width:640px; background:#fff; font-size:.88rem;}
+th,td{padding:14px 12px; text-align:left; border-bottom:1px solid var(--line);}
+thead th{background:var(--navy-900); color:#fff; font-weight:500; font-size:.8rem; letter-spacing:.08em; border-bottom:none;}
+tbody tr:nth-child(even) td{background:#FBF9F5;}
+td.fee{font-family:"Noto Serif JP",serif; font-size:1.06rem; font-weight:600; color:var(--navy-900); white-space:nowrap;}
+td.stage{font-family:"Noto Serif JP",serif; color:var(--gold); font-weight:600; white-space:nowrap;}
+.table-note{max-width:900px; margin:16px auto 0; font-size:.82rem; color:var(--ink-soft);}
+.table-note p{margin:0 0 .5em;}
+
+.initial{max-width:900px; margin:28px auto 0; background:#fff; border:1px solid var(--line); border-left:3px solid var(--gold); border-radius:3px; padding:24px 20px;}
+.initial h3{font-family:"Noto Serif JP",serif; font-size:1.05rem; margin:0 0 16px; color:var(--navy-900);}
+.initial-rows{display:grid; gap:1px; background:var(--line); border:1px solid var(--line); border-radius:2px; overflow:hidden; margin-bottom:18px;}
+@media(min-width:560px){ .initial-rows{grid-template-columns:1fr 1fr;} }
+.initial-rows > div{background:#FBF9F5; padding:14px 16px; display:flex; align-items:baseline; justify-content:space-between; gap:12px;}
+.initial-rows span{font-size:.88rem; color:var(--ink-soft);}
+.initial-rows b{font-family:"Noto Serif JP",serif; font-size:1.15rem; color:var(--navy-900); white-space:nowrap;}
+.initial-ex{margin:0 0 12px; font-size:.9rem; color:var(--ink);}
+.initial-ex b{color:var(--navy-900); white-space:nowrap;}
+.initial-note{margin:0; font-size:.8rem; color:var(--ink-soft);}
+
+/* ---------- 行事 ---------- */
+.events-grid{display:grid; gap:24px; max-width:960px; margin:0 auto; align-items:stretch;}
+@media(min-width:820px){ .events-grid{grid-template-columns:1fr 1fr; gap:36px;} }
+.events-grid img{border-radius:3px; width:100%; height:100%; min-height:260px; object-fit:cover; object-position:50% 30%;}
+.events-grid > img{align-self:stretch;}
+.ev-list{display:grid; gap:1px; background:var(--line); border:1px solid var(--line); border-radius:3px; overflow:hidden;}
+.ev-list > div{background:#fff; padding:14px 16px;}
+.ev-list h4{margin:0 0 3px; font-size:.95rem; color:var(--navy-900);}
+.ev-list p{margin:0; font-size:.82rem; color:var(--ink-soft);}
+
+/* ---------- 卒業とその先 ---------- */
+.after{display:grid; gap:14px; max-width:860px; margin:0 auto;}
+@media(min-width:760px){ .after{grid-template-columns:repeat(3,1fr);} }
+.after > div{background:#fff; border:1px solid var(--line); border-radius:3px; padding:22px 18px;}
+.after .n{color:var(--gold); font-family:"Noto Serif JP",serif; font-size:1.3rem; line-height:1;}
+.after h4{margin:8px 0 8px; font-size:1rem; color:var(--navy-900);}
+.after p{margin:0; font-size:.85rem; color:var(--ink-soft);}
+
+/* ---------- 宣言 ---------- */
+.creed{padding:80px 0;}
+.creed-in{max-width:620px; margin:0 auto; text-align:center;}
+.creed-in p{
+  font-family:"Noto Serif JP",serif; color:#fff;
+  font-size:clamp(1rem,4.2vw,1.22rem); line-height:2.2; letter-spacing:.05em;
+  margin:0 0 1.9em;
+}
+.creed-in p.hl{color:var(--gold-light); font-size:clamp(1.15rem,5vw,1.5rem);}
+.creed-in .end{
+  margin-top:10px; font-size:clamp(1.2rem,5.2vw,1.6rem); color:#fff; letter-spacing:.08em;
+}
+.creed-rule{width:1px; height:48px; background:linear-gradient(var(--gold),transparent); margin:0 auto 40px;}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:780px; margin:0 auto;}
+details{background:#fff; border:1px solid var(--line); border-radius:3px; margin-bottom:10px;}
+summary{
+  cursor:pointer; padding:16px 44px 16px 18px; font-weight:500; font-size:.94rem;
+  color:var(--navy-900); position:relative; list-style:none;
+}
+summary::-webkit-details-marker{display:none;}
+summary::after{
+  content:"＋"; position:absolute; right:16px; top:50%; transform:translateY(-50%);
+  color:var(--gold); font-size:1rem;
+}
+details[open] summary::after{content:"−";}
+details p{margin:0; padding:0 18px 18px; font-size:.88rem; color:var(--ink-soft);}
+
+/* ---------- CTA ---------- */
+.cta-card{
+  background:var(--navy-900); color:#fff; border-radius:4px;
+  padding:40px 22px; text-align:center; max-width:860px; margin:0 auto;
+  border-top:3px solid var(--gold);
+}
+.cta-card h2{font-family:"Noto Serif JP",serif; font-size:clamp(1.3rem,5.4vw,1.9rem); margin:0 0 8px; line-height:1.5; letter-spacing:.03em;}
+.cta-card .sub{color:rgba(255,255,255,.82); font-size:.92rem; margin:0 0 24px;}
+.badges{display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-bottom:24px;}
+.badges span{
+  border:1px solid rgba(255,255,255,.3); border-radius:999px;
+  padding:6px 16px; font-size:.78rem; color:rgba(255,255,255,.9);
+}
+.lineups{display:grid; gap:1px; background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.16); border-radius:3px; overflow:hidden; margin-bottom:26px; text-align:left;}
+@media(min-width:700px){ .lineups{grid-template-columns:repeat(3,1fr);} }
+.lineups > div{background:rgba(255,255,255,.04); padding:16px;}
+.lineups h4{margin:0 0 4px; font-size:.92rem; color:#fff;}
+.lineups p{margin:0; font-size:.8rem; color:rgba(255,255,255,.7);}
+.qr-row{display:flex; flex-direction:column; align-items:center; gap:18px;}
+@media(min-width:620px){ .qr-row{flex-direction:row; justify-content:center; gap:28px;} }
+.qr-row img{width:132px; background:#fff; padding:8px; border-radius:4px;}
+.qr-text{font-size:.86rem; color:rgba(255,255,255,.82); text-align:center;}
+@media(min-width:620px){ .qr-text{text-align:left;} }
+.cta-fine{max-width:860px; margin:22px auto 0; font-size:.84rem; color:var(--ink-soft);}
+.cta-fine b{color:var(--navy-900);}
+
+/* ---------- footer ---------- */
+footer{background:var(--navy-900); color:rgba(255,255,255,.7); padding:44px 0 32px; font-size:.82rem;}
+.f-top{display:flex; align-items:center; gap:12px; justify-content:center; margin-bottom:18px;}
+.f-top img{width:44px;}
+.f-name{font-family:"Noto Serif JP",serif; color:#fff; font-size:1.25rem; letter-spacing:.08em;}
+.f-name small{display:block; font-size:.58rem; letter-spacing:.24em; color:rgba(255,255,255,.6); font-family:"Noto Sans JP",sans-serif;}
+.f-links{display:flex; flex-wrap:wrap; gap:8px 20px; justify-content:center; margin-bottom:20px;}
+.f-links a{color:rgba(255,255,255,.78); text-decoration:none; font-size:.82rem;}
+.f-links a:hover{color:#fff;}
+.f-meta{text-align:center; line-height:2;}
+.f-copy{text-align:center; margin-top:18px; font-size:.72rem; color:rgba(255,255,255,.45);}
+
+/* ---------- 固定フッターCTA（スマホ） ---------- */
+.sticky-cta{
+  position:fixed; left:0; right:0; bottom:0; z-index:60;
+  background:rgba(14,33,67,.96); padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  display:flex; gap:10px; align-items:center;
+  border-top:1px solid rgba(255,255,255,.14);
+}
+.sticky-cta p{margin:0; color:#fff; font-size:.72rem; line-height:1.5; flex:1;}
+.sticky-cta a{flex:none; padding:11px 18px; font-size:.84rem;}
+@media(min-width:900px){ .sticky-cta{display:none;} }
+body{padding-bottom:72px;}
+@media(min-width:900px){ body{padding-bottom:0;} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hdr">
+    <img class="hdr-logo" src="logo.png" alt="">
+    <div>
+      <div class="hdr-name">Will</div>
+      <div class="hdr-sub">総合型選抜専門道場</div>
+    </div>
+    <nav>
+      <a href="#why">なぜ今</a>
+      <a href="#method">メソッド</a>
+      <a href="#people">3人</a>
+      <a href="#road">3年間</a>
+      <a href="#faq">よくある質問</a>
+    </nav>
+    <a class="hdr-cta" href="#contact">説明会に申し込む</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <img class="hero-img" src="hero-sea.jpg" alt="海に立ち、水平線を見つめる高校生">
+  <div class="wrap hero-in">
+    <img class="hero-logo" src="logo.png" alt="Will ロゴ">
+    <div class="hero-kicker">総合型選抜専門道場</div>
+    <h1 class="hero-name">Will</h1>
+    <div class="hero-slogan">
+      NO WILL, NO GROWTH.
+      <span>意志なきところに、成長なし。</span>
+    </div>
+    <div class="hero-rule"></div>
+    <p class="hero-h1">大学入学は、<br>ゴールではなくスタート。</p>
+    <div class="hero-note">
+      <b>2026年9月 プレ開講／11月 本開講。</b>
+      <small>オンラインで全国どこからでも。高1・高2・高3、各学年を募集しています。</small>
+    </div>
+    <a class="btn btn-gold hero-btn" href="#contact">
+      無料オンライン 教育講演会 ＆ 説明会へ
+      <small>顔出し不要・匿名参加OK</small>
+    </a>
+  </div>
+</div>
+
+<!-- ============ なぜ今 ============ -->
+<section id="why">
+  <div class="wrap">
+    <div class="sec-label">WHY</div>
+    <h2 class="sec-title">入試が、変わりました</h2>
+
+    <div class="notice">
+      <p>2027年度の大学入試から、総合型選抜・学校推薦型選抜では</p>
+      <p class="em">原則として<mark>「面接による評価」</mark>が行われます。</p>
+      <p><small>適用は、今の高校2年生が受験する入試から。（文部科学省）</small></p>
+    </div>
+
+    <div class="body-copy">
+      <p>国が「学力だけでは測らない」と決めた、ということです。これから問われるのは、自分の言葉で語れるかどうか。人とつながれるかどうか。<span class="strong">自分で決められるかどうか。</span></p>
+      <p>そこで、3つの問いです。</p>
+    </div>
+
+    <div class="q3" style="margin-top:24px;">
+      <div>何のために<br>行くのか？</div>
+      <div>なぜ、<br>そこなのか？</div>
+      <div>どう<br>なりたいのか？</div>
+    </div>
+
+    <div class="body-copy">
+      <p>この3つに自分の言葉で答えられる高校生は、驚くほど少数です。そして、答えられる子は強い。面接が必須になった今、これは理念ではなく<span class="strong">得点</span>です。</p>
+      <p>今すぐ答えられなくて大丈夫です。むしろ、答えられないところから始まります。この3つを自分の言葉にしていく3年間が、Willです。</p>
+    </div>
+
+    <p class="mincho mori">
+      森信三は、志を立てるべき時期を12〜16歳だと説きました。
+      <small>― 哲学者・教育者　森信三（1896–1992）</small>
+    </p>
+  </div>
+</section>
+
+<!-- ============ 私たちがしていること ============ -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-label">OUR STANCE</div>
+    <h2 class="sec-title">私たちがしていること</h2>
+
+    <div class="pull">
+      <p>学校の先生には、かないません。<br>だから、先生の力を100％受け取れる生徒を育てます。</p>
+    </div>
+
+    <div class="body-copy" style="margin-top:28px;">
+      <p>高校の先生は、各教科のスペシャリストです。お子様を誰よりよく知り、毎日会うことができ、質問は無料で、しかも調査書と推薦書を書いてくださる方です。</p>
+      <p class="strong">日本でいちばん贅沢な教育環境は、すでに学校にあります。</p>
+      <p>Willは、学校と競合しません。教科は教えません。志望理由書の正解も教えません。代わりに、その環境を使い切れる人を育てます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ メソッド ============ -->
+<section id="method">
+  <div class="wrap">
+    <div class="sec-label">METHOD</div>
+    <h2 class="sec-title">Will プロデュースメソッド</h2>
+    <p class="sec-lead">私たちの指導は、二本の柱でできています。</p>
+
+    <div class="pillars">
+      <div class="pillar">
+        <div class="no">第一の柱</div>
+        <h3>立志対話</h3>
+        <p>志・ビジョン・将来像を引き出し、自分の言葉に磨き上げます。志望理由書は「書く」前に「見つける」。中身がなければ、どんな技術も効きません。決めるのは、いつもご本人です。</p>
+      </div>
+      <div class="pillar">
+        <div class="no">第二の柱</div>
+        <h3>応援者づくり</h3>
+        <p>志は、一人では実現しません。関わってくださる方すべてを、応援者に変えていきます。先生に質問する。教えていただく。そして必ず、何が役に立ったかをお伝えする。推薦書の熱量は、ここで決まります。</p>
+      </div>
+    </div>
+
+    <div class="pull" style="margin-top:28px;">
+      <p>敵をつくらないとは、味方を増やすということです。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 起こること ============ -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-label">WHAT HAPPENS</div>
+    <h2 class="sec-title">Willで、お子様に起こること</h2>
+
+    <div class="happens">
+      <div>
+        <div class="n">1</div>
+        <h4>自分の才能に出会う</h4>
+        <p>強みを見つける対話と、学びを深める問い。</p>
+      </div>
+      <div>
+        <div class="n">2</div>
+        <h4>選ぶ力・決める力が育つ</h4>
+        <p>決めるのは常にご本人。私たちは決めません。</p>
+      </div>
+      <div>
+        <div class="n">3</div>
+        <h4>地域を越えた戦友ができる</h4>
+        <p>オンラインだから、住む場所が関係ありません。</p>
+      </div>
+      <div>
+        <div class="n">4</div>
+        <h4>学び続ける大人になる</h4>
+        <p>卒業後もOBとして戻れる場をつくります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3人 ============ -->
+<section id="people">
+  <div class="wrap">
+    <div class="sec-label">MEMBERS</div>
+    <h2 class="sec-title">お子様を見つめる、3人</h2>
+
+    <div class="people">
+      <div class="person">
+        <img src="yamamura.jpg" alt="山村 和也">
+        <div class="role">代表</div>
+        <h3>山村 和也</h3>
+        <p class="career">対話力カレッジ理事長<br>日本伝対話道 家元<br>大学非常勤講師</p>
+        <div class="eye">大学が出会いたい学生像を知る目</div>
+      </div>
+      <div class="person">
+        <img src="kunihiro.jpg" alt="国弘 紀子">
+        <div class="role">師範</div>
+        <h3>国弘 紀子</h3>
+        <p class="career">元公立高校教師<br>不登校支援の専門家<br>対話力カレッジ 支部長</p>
+        <div class="eye">一人ひとりの歩みに寄り添い、道筋を描く目</div>
+      </div>
+      <div class="person">
+        <img src="ohira.jpg" alt="大平 啓朗">
+        <div class="role">師範</div>
+        <h3>大平 啓朗</h3>
+        <p class="career">全盲の旅カメラマン<br>全国の学校講演に招かれる教育実践家<br>プロコーチ</p>
+        <div class="eye">眠る魅力を、言葉になるまで引き出す目</div>
+      </div>
+    </div>
+
+    <p class="people-note">3人とも、<b>教えるプロではなく、引き出すプロ</b>（プロコーチ）です。<br>お一人ずつに担任がつき、学校生活から受験、その先まで一緒に設計します。</p>
+  </div>
+</section>
+
+<!-- ============ 3つの理由 ============ -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-label">REASONS</div>
+    <h2 class="sec-title">なぜ「学校のフル活用」が、いちばん効くのか</h2>
+    <p class="sec-lead">成績や得点をご心配の方へ。3人それぞれの立場から、はっきりお答えします。</p>
+
+    <div class="reasons">
+      <div class="reason">
+        <span class="tag">理由 1</span>
+        <h3>応用の利く学力は、一冊をやり切ることから生まれる</h3>
+        <p>真の学力は、多くの教材をこなすことではなく、一冊を繰り返しやり切ることから生まれる。私たちはそう考えています。学校の問題集を繰り返しやり切れば、入試問題にも、大学に入ってからの学びにも応用が利きます。</p>
+        <p class="quote">「あの教材のあそこでやった、あの問題と同じだな」――この状態こそが、真に使いこなせているということです。</p>
+        <p class="by">山村／大学の視点</p>
+      </div>
+      <div class="reason">
+        <span class="tag">理由 2</span>
+        <h3>先生は、教えたがっている</h3>
+        <p>学校の先生は、みんな教えることが好きで、頼られることが好きです。「受験勉強は塾で」という風潮に、違和感や寂しさを感じておられる方も少なくありません。各教科のスペシャリストが、多くの時間を使って丁寧に教えてくださいます。個別の質問には、特に熱心に。</p>
+        <p class="quote">そして、テストを作るのも、成績をつけるのも、推薦書を書いてくださるのも、その先生方です。</p>
+        <p class="by">国弘／高校現場の視点</p>
+      </div>
+      <div class="reason">
+        <span class="tag">理由 3</span>
+        <h3>学校には、すべて揃っている</h3>
+        <p>教科書、問題集、テスト、教科ごとの先生、共に学ぶ友達。学校には、教科を学ぶためのすべてが揃っています。この資源をありがたく活かし切ること――学校をフル活用して筑波大学へ進んだ実践者として、これ以上のテスト対策を私は知りません。</p>
+        <p class="by">大平／実践者の視点</p>
+      </div>
+    </div>
+
+    <p class="table-note" style="text-align:center;">※ 学校のレベルがまったく合っていない場合は除きます。その際は、提携する教科塾をご紹介します。</p>
+
+    <div class="pull" style="margin-top:28px;">
+      <p>学校という最高のオーケストラに、指揮者がいなかっただけです。</p>
+      <small>楽器を増やすのではなく、すでにある音を鳴らし切る。それが私たちの仕事です。</small>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3年間の道のり ============ -->
+<section id="road">
+  <div class="wrap">
+    <div class="sec-label">3 YEARS</div>
+    <h2 class="sec-title">3年間の道のり</h2>
+    <p class="sec-lead">入会の時点で3年分をお見せしているのは、後から驚かせたくないからです。</p>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>期</th><th>学年</th><th>テーマ</th><th>この時期にやること</th><th>個別戦略会議</th><th>月謝</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="stage">発見期</td><td>高1</td><td>自分を知る</td><td>質問の型を身につける。いいとこ探し。習慣づくり</td><td>月1回</td><td class="fee">19,000円</td></tr>
+          <tr><td class="stage">深化期</td><td>高2</td><td>強みを言葉にする</td><td>志を掘り下げる。大学と社会を知る。応援者を増やす</td><td>月2回</td><td class="fee">29,000円</td></tr>
+          <tr><td class="stage">表現期</td><td>高3</td><td>書く・語る・出願する</td><td>志望理由書。面接。出願管理</td><td>月4回＋出願伴走</td><td class="fee">49,000円</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-note">
+      <p>学年が上がると月謝も上がります。これは値上げではなく、内容が変わるからです。</p>
+      <p>稽古は月〜金の18:30〜21:30、全国どこからでも。お一人ずつに担任がつき、参加ペースも一緒に決めます。週替わりで3人が特別講義を担当します。</p>
+    </div>
+
+    <div class="initial">
+      <h3>ご入会時に、月謝のほかにかかる費用</h3>
+      <div class="initial-rows">
+        <div><span>入会金</span><b>10,000円</b></div>
+        <div><span>初回登録費</span><b>7,000円</b></div>
+      </div>
+      <p class="initial-ex">
+        たとえば高1でご入会の場合、初月にお支払いいただくのは
+        <b>10,000円 ＋ 7,000円 ＋ 19,000円 ＝ 36,000円</b>、翌月からは月謝19,000円のみです。
+      </p>
+      <p class="initial-note">入会金・初回登録費は、ご入会時の一度だけです。表示はすべて税込。このほかに費用をいただくことはありません。</p>
+    </div>
+
+    <div class="table-scroll" style="margin-top:34px;">
+      <table>
+        <thead>
+          <tr><th>オンライン道場</th><th>内容</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>18:30 - 19:30</td><td>対話の時間（中学生も参加します。先輩として関わる時間です）</td></tr>
+          <tr><td>19:30 - 20:30</td><td>独学タイム／個別戦略会議（該当の方）</td></tr>
+          <tr><td>20:30 - 21:15</td><td>週替わり特別講義／作戦会議（学年混合）</td></tr>
+          <tr><td>21:15 - 21:30</td><td>チェックアウト（明日、誰に何を訊くかを決めます）</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-note">
+      <p>参加は「自由」ではなく、担任と決めた計画に沿って参加します。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 行事 ============ -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-label">EVENTS</div>
+    <h2 class="sec-title">一年を通した行事</h2>
+    <p class="sec-lead">日々の稽古に加えて、節目に「場」をつくります。大学受験はもちろん、入学後、就職活動、社会人になってからも役立つ経験になります。</p>
+
+    <div class="events-grid">
+      <img src="megaphone.jpg" alt="人前で自分の言葉を出す">
+      <div class="ev-list">
+        <div><h4>生徒たちとの語り場</h4><p>同世代と本音で語る。地域を越えた戦友が生まれます</p></div>
+        <div><h4>保護者の皆さんとの語り場</h4><p>親御さん同士がつながる。お一人で抱えないために</p></div>
+        <div><h4>親子での語り場</h4><p>普段は照れて言えないことを、場の力を借りて話す</p></div>
+        <div><h4>教育講演会</h4><p>外の風を入れる。生き方に触れる機会をつくる</p></div>
+        <div><h4>読書会</h4><p>独学力の土台。一冊を読み切り、語り合う経験</p></div>
+        <div><h4>プレゼン大会</h4><p>人前で自分の言葉を出す実戦。面接の最良の練習に</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 卒業とその先 ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-label">AND BEYOND</div>
+    <h2 class="sec-title">卒業と、その先</h2>
+    <p class="sec-lead">Willは、合格発表で解散しません。むしろ、そこから始まります。</p>
+
+    <div class="after">
+      <div>
+        <div class="n">①</div>
+        <h4>対話力検定</h4>
+        <p>在籍中、または合格後に、対話力の検定を受けていただけます。一生ものの認定が手元に残ります。</p>
+      </div>
+      <div>
+        <div class="n">②</div>
+        <h4>卒業式 兼 壮行会</h4>
+        <p>受験の終わりを祝う会ではなく、旅立ちを送り出す会です。終わり方が、その3年間の意味を決めます。</p>
+      </div>
+      <div>
+        <div class="n">③</div>
+        <h4>OBとして、いつでも戻れます</h4>
+        <p>大学入学後も、いつでもWillの場に戻れます。希望者はサポーターとして、後輩の対話相手になれます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 宣言 ============ -->
+<section class="navy-sec creed">
+  <div class="wrap creed-in">
+    <div class="creed-rule"></div>
+    <p>順位をつけない。<br>先回りして、失敗させない。<br>そのうえで、社会は言う。<br>「グローバルに。世界で活躍を。」</p>
+    <p>選択肢だけは、あふれている。</p>
+    <p>大事なのは、正解を教わることだけじゃない。<br>まず、自分を知ること。<br>そして、広い世界に触れること。<br>良し悪しではなく、多様であることを肌で感じること。</p>
+    <p class="hl">たった一人との出会いで、今が動き出す。<br>たった一言で、夢が見つかる。<br>たった一度の対話で、人生が変わる。</p>
+    <p>考える。動き出す。<br>頭の中だけで終わらせない。<br>そうやって人は少しずつ、本物の声で<br>「決められる」ようになっていく。</p>
+    <p class="hl">失敗はある。<br>初めての人生だから。<br>それを経験にして、また進めばいい。</p>
+    <p>夢中は、努力を超える。<br>好きなこと、得意なことを見つけたら、<br>思い切り、突っ走ればいい。</p>
+    <p>目指すのは、合格のその先。<br>その先を思い描くことが、今の自分を輝かせる。</p>
+    <p class="end mincho">Willは、受験のためだけの場所じゃない。<br>人生の地図は、自分で描く。<br>さあ、Willで、その一歩を。</p>
+  </div>
+</section>
+
+<!-- ============ 保護者の皆さまへ ============ -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-label">FOR PARENTS</div>
+    <h2 class="sec-title">保護者の皆さまへ</h2>
+    <p class="sec-lead">ご家庭にお願いしたいことを、3つだけ書かせてください。</p>
+
+    <div class="reasons">
+      <div class="reason">
+        <span class="tag">① </span>
+        <h3>答えを急がせないでください</h3>
+        <p>「で、志望校はどこにするの」「将来何になりたいの」――ご心配はよく分かります。ただ、急かされた瞬間に、お子様は「大人が納得しそうな答え」を探し始めます。それは志ではありません。</p>
+        <p>私たちが3年かけてやろうとしているのは、その場しのぎではない答えを、本人の中から出すことです。時間をください。</p>
+      </div>
+      <div class="reason">
+        <span class="tag">② </span>
+        <h3>学校の先生を、一緒に立ててください</h3>
+        <p>Willは、学校と競合しません。先生方こそが最大の味方だと考えています。ご家庭でも「先生に訊いてみたら」と言っていただけると、お子様の行動が変わります。</p>
+        <p class="quote">先生を頼れる子は、伸びます。そして、推薦書の熱量が変わります。</p>
+      </div>
+      <div class="reason">
+        <span class="tag">③ </span>
+        <h3>変化は、成績より先に態度に出ます</h3>
+        <p>Willに通い始めて最初に変わるのは、点数ではありません。学校の話をするようになった。先生の名前が出てくるようになった。自分から質問するようになった。</p>
+        <p>そういう小さな変化を見つけたら、ぜひ言葉にして伝えてあげてください。見つけてもらえた行動は、続きます。</p>
+      </div>
+    </div>
+
+    <div class="pull" style="margin-top:28px;">
+      <p>保護者の皆さんとの語り場、親子での語り場もご用意しています。</p>
+      <small>お一人で抱えないでください。私たちも、他のご家庭も、一緒にいます。</small>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-label">FAQ</div>
+    <h2 class="sec-title">よくあるご質問</h2>
+
+    <div class="faq">
+      <details open>
+        <summary>教科を教えないなら、成績はどうなりますか</summary>
+        <p>先生への質問を設計します。各教科のスペシャリストが毎日そばにおられて、しかも無料です。これを使い切ることが、最も効率の良い勉強だと考えています。</p>
+      </details>
+      <details>
+        <summary>塾に通っていますが、併用できますか</summary>
+        <p>できます。教科はそちら、志づくりはWill。役割が違うので、競合しません。</p>
+      </details>
+      <details>
+        <summary>部活が忙しく、毎日は参加できません</summary>
+        <p>担任と一緒に、参加できるペースを決めます。全員が同じ回数である必要はありません。</p>
+      </details>
+      <details>
+        <summary>地方に住んでいます</summary>
+        <p>オンラインなので、どこからでも。地域を越えた仲間ができることが、むしろ強みになります。</p>
+      </details>
+      <details>
+        <summary>やりたいことが、まだありません</summary>
+        <p>それが普通です。ある人のほうが少数です。見つけにいくための3年間です。</p>
+      </details>
+      <details>
+        <summary>高3から入っても間に合いますか</summary>
+        <p>内容によります。まずは個別にご相談ください。正直にお伝えします。</p>
+      </details>
+      <details>
+        <summary>何を持っていけばいいですか</summary>
+        <p>学校の教科書と問題集、そして今いちばん困っていることを一つ。</p>
+      </details>
+    </div>
+
+    <div class="pull" style="margin-top:32px;">
+      <p>この道場に、あなたを変える魔法はありません。<br>あるのは、あなたが自分で扉を開けるまで待つ人間が3人いる、ということだけです。</p>
+      <small>扉を開けるのは、いつでもあなたです。</small>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section id="contact" class="alt">
+  <div class="wrap">
+    <div class="cta-card">
+      <h2>まずは、無料オンライン<br>教育講演会 ＆ 説明会 へ。</h2>
+      <p class="sub">顔出し不要・匿名参加OK。ご自宅からご参加いただけます。</p>
+
+      <div class="badges">
+        <span>参加費 無料</span>
+        <span>ご自宅から参加OK（Zoom）</span>
+        <span>顔出し不要・匿名参加OK</span>
+      </div>
+
+      <div class="lineups">
+        <div>
+          <h4>おーちゃん 山形・学校講演会ツアー 報告会</h4>
+          <p>全盲の旅カメラマンが、全国の学校で見てきたことを話します。</p>
+        </div>
+        <div>
+          <h4>トリプル教育講演会</h4>
+          <p>3人がそれぞれの立場から、入試と、その先の生き方を話します。</p>
+        </div>
+        <div>
+          <h4>説明会</h4>
+          <p>Willの3年間を、ご家庭の状況に合わせてご説明します。</p>
+        </div>
+      </div>
+
+      <div class="qr-row">
+        <img src="https://qr-official.line.me/gs/M_582qmhnp_GW.png?oat_content=qr"
+             onerror="this.onerror=null;this.src='line-qr.png';"
+             alt="Will 公式LINE 友だち追加QRコード" width="132" height="132">
+        <div>
+          <p class="qr-text">開催日程・詳細は、すべて公式LINEでご案内します。<br>まずは友だち追加を。</p>
+          <p style="margin-top:14px;"><a class="btn btn-line" href="https://page.line.me/582qmhnp" target="_blank" rel="noopener">公式LINEを友だち追加する</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-fine">
+      <p>✓ ご希望のご家庭には、強みを一緒に見つける<b>三者懇談（60分）</b>もご用意しています。</p>
+      <p>✓ <b>ご入会されるかどうかは、いっさい関係ありません。</b>この60分だけで完結して構いません。</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <img src="logo.png" alt="">
+      <div class="f-name">Will<small>総合型選抜専門道場</small></div>
+    </div>
+    <div class="f-links">
+      <a href="#why">なぜ今</a>
+      <a href="#method">メソッド</a>
+      <a href="#people">3人</a>
+      <a href="#road">3年間の道のり</a>
+      <a href="#faq">よくあるご質問</a>
+      <a href="https://page.line.me/582qmhnp" target="_blank" rel="noopener">公式LINE</a>
+    </div>
+    <div class="f-meta">
+      NO WILL, NO GROWTH. ― 意志なきところに、成長なし。<br>
+      運営：一般社団法人 次世代設計研究所<br>
+      大阪府東大阪市高井田元町1-4-21 201
+    </div>
+    <div class="f-copy">© Will / 一般社団法人 次世代設計研究所</div>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <p>無料オンライン講演会＆説明会<br>受付中（顔出し不要）</p>
+  <a class="btn btn-line" href="https://page.line.me/582qmhnp" target="_blank" rel="noopener">LINEで申込</a>
+</div>
+
+</body>
+</html>
